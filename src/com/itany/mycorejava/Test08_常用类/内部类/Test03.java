@@ -6,7 +6,8 @@ package com.itany.mycorejava.Test08_常用类.内部类;
  */
 public class Test03 {
     public static void main(String[] args) {
-
+        Out2.In2 in2=new Out2.In2();
+        in2.show();
     }
 }
 
@@ -15,9 +16,21 @@ class Out2{
     private int age=10;
 
     static class In2{
-        private String name;
+        private String name="in";
+        private String sex="nv";
+
+        public void show(){
+            System.out.println(777);
+            Out2 out2=new Out2();
+            out2.show();
+        }
     }
 
+    public void show(){
+        In2 in2=new In2();
+        in2.show();
+        System.out.println(666);
+    }
 
     public String getName() {
         return name;
